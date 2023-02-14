@@ -6,7 +6,7 @@
     <Images :pockemonId="4" :showPockemon="true" />
     
     <!-- Options -->
-    <Options />
+    <Options :pockemons="pockemonArr"/>
 </template>
 
 <script>
@@ -18,7 +18,21 @@ import getPockemonsOption from '../helpers/getPockemonOptions'
 console.log( getPockemonsOption() );
 
 export default {
-    components: { Options,Images}
+    components: { Options,Images},
+    data() {
+        return {
+            pockemonArr: []
+        }
+    },
+    methods: {
+        async mixPockemonArray() {
+            this.pockemonArr = await getPockemonsOption()
+            // console.log( this.pockemonArr );
+        }
+    },
+    mounted() {
+        this.mixPockemonArray()
+    }
 }
 </script>
 
