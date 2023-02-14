@@ -1,6 +1,9 @@
 <template>
     <div class="pokemon-container">
-        <img :src="imgSrc" alt="Pockemon" class="hidden-pockemon">
+        <img 
+            :src="imgSrc" 
+            alt="Pockemon" 
+            class="hidden-pockemon">
         <img
             v-if="showPockemon" 
             :src="imgSrc" 
@@ -40,14 +43,14 @@ export default {
 img {
     height: 200px;
     position: absolute;
-    right: 32%;
+    /* right: 32%; */
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
 }
-.hidden-pokemon {
+.hidden-pockemon {
     filter: brightness(0);
 }
 
