@@ -1,6 +1,6 @@
 import pockemonApi from '@/api/pockemonApi';
 
-const getPockemons = () => {
+export const getPockemons = () => {
 
     const pockemonsArr = Array.from( Array(650) )
 
@@ -20,7 +20,7 @@ const getPockemonsOption = async () => {
 
 }
 
-const getPockemonsNames = async( [a,b,c,d] = [] ) => {
+export const getPockemonsNames = async( [a,b,c,d] = [] ) => {
 
     // Array de promesas para mostrar solo las cuatro opciones
     // const resps = await pockemonApi.get(`/1`)
